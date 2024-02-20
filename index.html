@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>The Film Vault</title>
+</head>
+<body>
+    <script>
+         const enteredPassword = prompt("Enter the password to access The Film Vault:");
+         const correctPassword = "992Le"; 
+        if (enteredPassword === correctPassword) {
+            document.body.style.display = "block";
+        } else {
+            alert("Incorrect password. Access denied.");
+            document.body.style.display = "none";
+        }
+    </script>
+<h1>The Film Vault</h1>
+    <div id="search-bar">
+        <div><button id="movies-watched-btn" style="position: absolute; left: 40px ; height:35px;width:200px" ><img src="plus.svg" alt="add" style="width: 20px; height: 20px;">Log</button></div>
+        
+        
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Explore Film Database">
+            <button type="submit"><img src="search.svg" alt="search" style="width: 20px; height: 20px;"></button>
+        </form>
+        
+    </div>
+    <div id="movies-watched-table" style="display: none;">
+        <h2>Movies Watched</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody id="movies-watched-body">
+                <tr>
+                    <th>Blade Runner 2049</th>
+                    <th>2017</th>
+                </tr>                
+                <tr>
+                    <th>Mad Max: Fury Road</th>
+                    <th>2015</th>
+                </tr>
+                
+                
+                
+            </tbody>
+        </table>
+        <input type="text" id="movie-title-input" placeholder="Enter movie title">
+        <input type="text" id="movie-year-input" placeholder="Enter movie year">
+        <button id="add-movie-btn">Add Movie</button>
+    </div>
+    
+    <div>
+        <h2 id="category-title">Now Showing Films</h2>
+    </div>
+
+    <div id="movies-grid"></div>
+
+    <div id="footer">
+        <img src="logo.svg" alt="logo">
+        <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
